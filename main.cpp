@@ -1,3 +1,4 @@
+#include <Windows.h>
 #include <sstream>
 #include <iostream>
 
@@ -14,6 +15,7 @@ public:
         std::ostringstream s;
         s << x;
         cerr << s.str();
+        OutputDebugString(s.str().c_str());
         return *this;
     }
 };
