@@ -15,12 +15,12 @@ public:
     }
 };
 
-Logger logger;
+Logger Log;
 
 int main(int argc, char* argv[])
 {
     int answer = 42;
-    VERBOSE_ENABLED(logger << "\nHowdy! The answer is " << answer << ". I kid you not.\n\n");
-    VERBOSE_DISABLED(logger << "*** THIS SHOULD NOT PRINT, NOT EVEN THE ANSWER " << answer << " ***\n\n");
+    VERBOSE_ENABLED(Log << "\nHowdy! The answer is " << answer << ". I kid you not.\n\n");
+    VERBOSE_DISABLED(Log << "*** THIS SHOULD NOT PRINT, NOT EVEN THE ANSWER " << answer << " ***\n\n");
     return 0;
 }
