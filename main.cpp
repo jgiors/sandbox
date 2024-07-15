@@ -1,3 +1,4 @@
+#include <sstream>
 #include <iostream>
 
 using std::cerr;
@@ -10,7 +11,9 @@ public:
     template <typename T>
     Logger& operator<<(T x)
     {
-        cerr << x;
+        std::ostringstream s;
+        s << x;
+        cerr << s.str();
         return *this;
     }
 };
