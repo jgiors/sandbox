@@ -5,17 +5,17 @@ using std::cerr;
 #define VERBOSE_ENABLED(X)  (X)
 #define VERBOSE_DISABLED(...)
 
-class Log {
+class Logger {
 public:
     template <typename T>
-    Log& operator<<(T x)
+    Logger& operator<<(T x)
     {
         cerr << x;
         return *this;
     }
 };
 
-Log logger;
+Logger logger;
 
 int main(int argc, char* argv[])
 {
