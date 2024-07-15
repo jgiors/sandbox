@@ -10,7 +10,7 @@ using std::cerr;
 class Logger {
 public:
     template <typename T>
-    Logger& operator<<(T x)
+    Logger& operator<<(const T &x)
     {
         std::ostringstream s;
         s << x;
